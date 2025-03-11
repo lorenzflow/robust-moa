@@ -134,7 +134,7 @@ class PromptsConfig:
     deceptive_proposer_user_prompt_end: str = ""            # End text for proposer user prompt
     deceptive_aggregating_proposer_user_prompt_end: str = "" # End text for aggregating user prompt
 ```
-The prompts used for experiments in our paper are specified in `conf/prompts//alpaca_prompts.yaml`.
+The prompts used for experiments in our paper are specified in `conf/prompts/alpaca_prompts.yaml`.
 
 ## Streamlit App for QuALITY Benchmark
 To inspect the generated references and responses we have built a little streamlit webapp.
@@ -150,7 +150,7 @@ Then navigate to http://<server_address>:<port> in your browser
 
 ## Running Defenses
 
-To run defenses on a set of already generated references run the following command:
+To run defenses on a set of already generated references run the `defend.py` scrript. For example, the following command will run the Cluster&Filter defense using kmeans and openai's embedding model:
 
 ```python
   python defend.py \
@@ -158,13 +158,13 @@ To run defenses on a set of already generated references run the following comma
     --defense_mode "clustering" \
     --embeddings_type "openai" \
     --cluster_method "kmeans" \
-    --output-path="outputs_test/clustering_defense \
-    --reference_path="outputs_test/example_with_ref.json" \
+    --output-path="outputs_test/quality/clustering_defense \
+    --reference_path="test_outputs/quality/000_003_with_ref.json" \
     --num_samples 1 \
     --num-proc 3 \
-    --baseline_paths="outputs_test/example.json" \
+    --baseline_paths="test_outputs/quality/000_003_with_ref.json" \
     --baseline_output_types="output" \
-    --results_dir "results/defenses_test" \
+    --results_dir "test_results/quality/defenses_test" \
 ```
 
 ## Note
