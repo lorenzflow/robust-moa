@@ -385,7 +385,7 @@ def main(
         robust_output: output of the defense is saved in the output file
     """
     if embeddings_type == "openai":
-        openai.api_key = "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"
+        openai.api_key = os.environ.get("OPENAI_API_KEY")
     if only_compute_metrics:
         with open(output_path+".json") as f:
             eval_set = json.load(f)
