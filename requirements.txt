@@ -1,0 +1,9 @@
+openai
+fire
+loguru
+datasets
+typer
+rich
+hydra-core
+pytest
+pytest-mock

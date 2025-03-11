@@ -1,0 +1,30 @@
+# Directory structure:
+# ├── conf
+# │   ├── config.yaml
+# │   ├── moa
+# │   │   ├── llama_70B.yaml
+# │   │   ├── mixtral.yaml
+# │   |-- deceptive
+# │   |   ├── 000_003_ignore.yaml
+# │   |   └── 000_003.yaml
+# │   ├── experiment
+# │   │   ├── quality_subpassage.yaml
+# │   │   └── alpaca.yaml
+# │   └── prompts
+# │       └── deceptive.yaml
+
+# conf/config.yaml
+defaults:
+  - _self_
+  - moa: mixtral
+  - experiment: quality_subpassage
+  - deceptive: truthful
+  - prompts: alpaca_prompts # only used for alpaca experiment
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  # - prompts: deceptive
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

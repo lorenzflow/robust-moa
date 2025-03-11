@@ -1,0 +1,8 @@
+task: "quality"
+output_path: "test_outputs/quality"
+num_samples: 1
+save_references: true
+use_subpassages: true  # default value
+hard_only: true
+seed: 42  # default value
+results_dir: "test_outputs/quality"

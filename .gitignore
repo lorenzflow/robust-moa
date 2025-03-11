@@ -1,0 +1,26 @@
+__pycache__
+outputs/
+job_scripts/
+job_scrtipts/myriad/
+api_keys.sh
+plots/
+results/
+test_results/
+analysis.ipynb
+job_scripts/rsync.sh
+job_scripts/quality/with_api_keys/
+job_scripts/alpaca/with_api_keys/
+results_backup/
+outputs_full/
+results_alpaca/
+results_backup_2/
+results_llamaagg/
+leaderboard/
+analysis_improved_dec.ipynb
+
+
+compute_metrics_backup.py
+defend_quality 2.py
+generate_for_quality_subpassage 2.py
+generate_for_quality_subpassage_dec_dir 2.py
+test_outputs/

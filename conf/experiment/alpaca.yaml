@@ -1,0 +1,5 @@
+task: "alpaca"
+output_path: "test_outputs/alpaca"
+save_references: true
+num_samples: 1
+seed: 42
